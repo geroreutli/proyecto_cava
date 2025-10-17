@@ -1,0 +1,79 @@
+/* subida_productos.css */
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor principal */
+.auth-container {
+  background: #1a1a1a;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 360px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+.auth-container h2 {
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #bbb;
+}
+
+button[type="submit"] {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #ffcc00;
+  color: #1a1a1a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #e6b800;
+}
+
+/* Mensajes de éxito o error */
+.success {
+  color: #00ff99;
+  margin-top: 10px;
+}
+
+.error {
+  color: #ff4d4d;
+  margin-top: 10px;
+}

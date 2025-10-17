@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cava&Oro - Tienda Online</title>
+  <link rel="stylesheet" href="cyocss.css">  
+</head>
+<body>
+<div class="layout">
+
+  <!-- Barra lateral -->
+  <aside class="barra-lateral" id="barraLateral">
+    <h2>Más vendidos</h2>
+    <?php foreach ($productos as $producto): ?>
+      <div class="producto">
+        <img src="<?= htmlspecialchars($producto['imagen']) ?>" alt="Imagen de <?= htmlspecialchars($producto['nombre']) ?>">
+        <h3><?= htmlspecialchars($producto['nombre']) ?></h3>
+        <p>$<?= formatearPrecio($producto['precio']) ?></p>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+    <?php endforeach; ?>
+  </aside>
+  <!-- Contenido principal -->
+  <div class="contenido">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.php">
+          <img src="img/cavayoro.jpeg" alt="Logo de Cava&Oro" class="header-img">
+        </a>
+      </div>
+      <div class="buscador">
+        <form action="buscar.php" method="GET">
+          <input type="text" name="query" placeholder="Buscar productos..." required>
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+      <div class="acciones-header">
+        <button id="toggle-theme">🌙</button>
+        <button class="btn-header" onclick="alert('Próximamente Carrito de Compras')">🛒 Carrito</button>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section class="bienvenida">
+        <h1>Bienvenidos a Cava&Oro 🍷</h1>
+        <p>Descubrí nuestros productos destacados, promociones y más.</p>
+        <p>Explorá todas nuestras categorías desde la barra lateral izquierda.</p>
+      </section>
+
+      <!-- Promociones -->
+      <section class="promociones">
+        <h2>Promociones destacadas</h2>
+        <div class="promo-grid">
+          <img src="img/sale.jpg" alt="Ofertas">
+          <img src="img/atencion.jpg" alt="Atención al cliente">
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-info">
+        <p>&copy; 2025 Cava&Oro - Todos los derechos reservados</p>
+        <p>Métodos de pago: 💳 💵 🍷</p>
+        <p>Seguinos en redes: 📱</p>
+      </div>
+      <span id="fecha-hora"></span>
+    </footer>
+  </div>
+</div>
+<script src="scriptrespaldo.js"></script>
+</body>
+</html>

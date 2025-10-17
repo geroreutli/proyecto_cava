@@ -1,0 +1,72 @@
+/* ===== Carrito de Compras ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+li {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+li strong {
+    font-size: 18px;
+}
+
+li a {
+    text-decoration: none;
+    background-color: #f05454;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 8px;
+    margin-left: 5px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+li a:hover {
+    background-color: #d94343;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+p a {
+    text-decoration: none;
+    color: #3c91e6;
+    font-weight: 500;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
